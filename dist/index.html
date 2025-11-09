@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CapizXplore</title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="/fonts/remixicon.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lobster&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+        .sticky-nav {
+            transition: all 0.3s ease;
+        }
+    </style>
+    <!-- border-2 border-red-500  -->
+    <style>
+        .font-lobster {
+            font-family: 'lobster', cursive;
+        }
+        .font-roboto {
+            font-family: "Roboto Slab", serif;
+        }
+    </style>
+    <style>
+        @layer utilities {
+  .header-bg {
+    background-image: url('/dist/images/citty.jpg');
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: 100% 126px;
+  }
+}
+    </style>
+    <style>
+        .swiper {
+      width: 100%;
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+
+    .swiper-slide {
+      background-position: center;
+      background-size: cover;
+      width: 380px;
+      height: auto;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+    }
+    </style>
+</head>
+<body class="font-roboto">
+    <header id="About" class="header-bg text-white py-6 flex justify-center text-center">
+        <div>
+            <h1 class="font-lobster text-4xl font-bold mb-3  drop-shadow-[4px_4px_6px_rgba(0,112,255,0.5)]">CapizXplore</h1>
+            <p>The Seafood Capital of the Philippines</p>
+        </div>
+    </header>
+    <nav id="nav" class="bg-gray-800 p-4 z-10">
+      <div class="container mx-auto flex justify-between items-center">
+          <h1 class="font-lobster text-3xl font-bold ml-5 text-white">CapizXplore</h1>
+          <div class="hidden md:flex space-x-4 justify-between items-center gap-1">
+              <a href="#About" class="text-white hover:text-gray-400 transition pr-1 border-r border-gray-400">About Capiz</a>
+              <a href="#Attractions" class="text-white hover:text-gray-400 transition pr-1 border-r border-gray-400">Top Attractions</a>
+              <a href="#Cousine" class="text-white hover:text-gray-400 transition pr-1 border-r border-gray-400">Cuisine</a>
+              <a href="#ContactUs" class="text-white hover:text-gray-400 transition pr-1 border-r border-gray-400">Contact Us</a>
+          </div>
+          <a href="/dist/FindYourGuide.html" class="hidden md:flex bg-white hover:bg-gray-200 p-2 rounded-lg font-semibold">Choose Your Adventure</a>
+          <button id="menu-toggle" class="text-white md:hidden focus:outline-none">
+            <i class="ri-menu-line ri-2x"></i>
+          </button>
+      </div>
+      <div id="mobile-menu" class="md:hidden hidden text-center">
+          <a href="#About" class="block text-gray-300 hover:text-white px-4 py-2">About Capiz</a>
+          <a href="#Attractions" class="block text-gray-300 hover:text-white px-4 py-2">Top Attractions</a>
+          <a href="#Cousine" class="block text-gray-300 hover:text-white px-4 py-2">Cuisine</a>
+          <a href="#ContactUs" class="block text-gray-300 hover:text-white px-4 py-2">Contact Us</a>
+          <a href="/dist/FindYourGuide.html" class="bg-white hover:bg-gray-200 transition p-2 rounded-lg">Choose Your Adventure</a>
+      </div>
+  </nav>
+  
+  <!-- About Capiz / Top Attractions / Cuisine / Contact Us  -->
+  <main class="container mx-auto my-12 px-6">
+        <section class="mb-12 p-6 bg-gray-100 rounded-lg shadow hover:shadow-gray-500 transition duration-500 flex flex-col items-center">
+            <h2 class="font-lobster text-3xl font-semibold text-gray-800 mb-4">About Capiz</h2>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide rounded-lg border-b-4 border-gray-800 border-t-4 border-gray-800 p-5">
+                        <img class="w-96 h-52 rounded-lg" src="images/About Capiz/Panay-Church.jpg" alt="/Panay-Church">
+                            <div class="text-center mt-3">
+                                <h1 class="font-bold">Panay Church (Sta. Monica Parish)</h1>
+                                <p>Built in 1884, Panay Church, also known as Santa Monica Parish Church was declared as one of the Philippines’ National Historic Landmarks in 1997.</p>
+                                <button data-modal="modal1" class="read-more-btn mt-1 bg-gray-400 rounded-lg p-1">Read More</button>
+                            </div>
+                    </div>
+                    <div class="flex flex-col swiper-slide items-center rounded-lg border-b-4 border-gray-800 border-t-4 border-gray-800 p-5">
+                        <img class="w-96 h-52 rounded-lg" src="images/About Capiz/Roxas City Museum (Ang Panublion).jpg" alt="Roxas City Museum">
+                        <div class="text-center mt-3">
+                            <h1 class="font-bold">Roxas City Museum (Ang Panublion)</h1>
+                            <p>Interestingly, Roxas City Museum, also called Ang Panublion, was built as a water tank in 1910.</p>
+                            <button data-modal="modal2" class="read-more-btn mt-1 bg-gray-400 rounded-lg p-1">Read More</button>
+                        </div>
+                    </div>
+                    <div class="flex flex-col swiper-slide items-center rounded-lg border-b-4 border-gray-800 border-t-4 border-gray-800 p-5">
+                        <img class="w-96 h-52 rounded-lg" src="images/About Capiz/Paseo del Rio.jpg" alt="Paseo del Rio">
+                        <div class="text-center mt-3">
+                            <h1 class="font-bold">Paseo del Rio</h1>
+                            <p>Looking for a place where you can take a leisurely walk in Roxas City? Look no further than Paseo del Rio.</p>
+                            <button data-modal="modal3" class="read-more-btn mt-1 bg-gray-400 rounded-lg p-1">Read More</button>
+                        </div>
+                    </div>
+        
+                    <div class="flex flex-col swiper-slide items-center rounded-lg border-b-4 border-gray-800 border-t-4 border-gray-800 p-5">
+                        <img class="w-96 h-52 rounded-lg" src="images/About Capiz/Panay Ecological Park.jpg" alt="Panay Ecological Park">
+                        <div class="text-center mt-3">
+                            <h1 class="font-bold">Panay Ecological Park</h1>
+                            <p>Located in Panay Town, the Panay Ecological Park offers a serene escape into nature.</p>
+                            <button data-modal="modal4" class="read-more-btn mt-1 bg-gray-400 rounded-lg p-1">Read More</button>
+                        </div>
+                    </div>
+                    <div class="flex flex-col swiper-slide items-center rounded-lg border-b-4 border-gray-800 border-t-4 border-gray-800 p-5">
+                        <img class="w-96 h-52 rounded-lg" src="images/About Capiz/Pilar Cave and Suhot Cave.jpeg" alt="Pilar Cave and Suhot Cave">
+                        <div class="text-center mt-3">
+                            <h1 class="font-bold">Pilar Cave and Suhot Cave</h1>
+                            <p>Feeling adventurous? Embark on a spelunking journey at Pilar Cave and Suhoton Cave.</p>
+                            <button data-modal="modal5" class="read-more-btn mt-1 bg-gray-400 rounded-lg p-1">Read More</button>
+                        </div>
+                    </div>
+                    <div class="flex flex-col swiper-slide items-center rounded-lg border-b-4 border-gray-800 border-t-4 border-gray-800 p-5">
+                        <img class="w-96 h-52 rounded-lg" src="images/About Capiz/The Ruins of Alcatraz.jpeg" alt="The Ruins of Alcatraz">
+                        <div class="text-center mt-3">
+                            <h1 class="font-bold">The Ruins of Alcatraz</h1>
+                            <p>The western end of Baybay Beach is dominated by the Ruins of Alcatraz, encroaching a promontory that overlooks the coast and the sea.</p>
+                            <button data-modal="modal6" class="read-more-btn mt-1 bg-gray-400 rounded-lg p-1">Read More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+    </main>
+
+    <section id="Attractions" class=" bg-gray-100 scroll-mt-28 border border-gray-100">
+      <main class="container bg-gray-100 mx-auto my-12 mb-24">
+        <div class="flex flex-col items-center">
+            <h1 class="tex font-lobster text-3xl font-semibold text-gray-800 text-center mb-5">Top Attractions</h1>
+            <p class="text-center">Capiz offers rich history, natural beauty, and culture with highlights like Santa Monica Church, Baybay Beach, Palina Ecopark, and Olutayan Island.</p>
+            <div class=" mt-8 grid grid-cols-2 md:grid-cols-4 gap-9">
+              
+              <div class="flex justify-center items-center w-auto h-auto">
+                <div class="relative group w-64 h-64">
+                  <img src="/dist/images/Top Attractions/SantaMonicaChurch.jpg" alt="SantaMonicaChurch" class="rounded-lg w-64 h-64 object-cover">
+                  <div class="rounded-lg absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
+                    <div class="text-white text-center">
+                      <button class="text-lg font-semibold">View Details</button>
+                    </div>
+              </div>
+              <h1 class="font-bold text-left">Santa Monica Parish Church</h1>
+            </div>
+        </div>
+                    
+        <div class="flex justify-center items-center w-auto h-auto">
+          <div class="relative group w-64 h-64">
+            <img src="/dist/images/Top Attractions/RoxasCity.jpg" alt="Sample Image" class="rounded-lg w-64 h-64 object-cover">
+            <h1 class="font-bold text-left">Roxas City</h1>
+            <div class="rounded-lg absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
+              <div class="text-white text-center">
+                <button class="text-lg font-semibold">View Details</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex justify-center items-center w-auto h-auto">
+          <div class="relative group w-64 h-64">
+            <img src="/dist/images/Top Attractions/baybaybeach.jpg" alt="Sample Image" class="rounded-lg w-64 h-64 object-cover">
+            <h1 class="font-bold text-left">Baybay Beach</h1>
+            <div class="rounded-lg absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
+              <div class="text-white text-center">
+                <button class="text-lg font-semibold">View Details</button>
+              </div>
+            </div>
+          </div>
+        </div>
+                    
+        <div class="flex justify-center items-center w-auto h-auto">
+          <div class="relative group w-64 h-64">
+            <img src="/dist/images/Top Attractions/Mantalinga.jpg" alt="Sample Image" class="rounded-lg w-64 h-64 object-cover">
+            <h1 class="font-bold text-left">Mantalinga Island</h1>
+            <div class="rounded-lg absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
+              <div class="text-white text-center">
+                <button class="text-lg font-semibold">View Details</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex justify-center items-center w-auto h-auto">
+          <div class="relative group w-64 h-64">
+            <img src="/dist/images/Top Attractions/PalinaEcoParck.jpg" alt="Sample Image" class="rounded-lg w-64 h-64 object-cover">
+            <h1 class="font-bold text-left">Palina Greenbelt Ecopark</h1>
+            <div class="rounded-lg absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
+              <div class="text-white text-center">
+                <button class="text-lg font-semibold">View Details</button>
+              </div>
+            </div>
+          </div>
+        </div>
+                    
+        <div class="flex justify-center items-center w-auto h-auto">
+          <div class="relative group w-64 h-64">
+            <img src="/dist/images/Top Attractions/Olotoyan.jpg" alt="Sample Image" class="rounded-lg w-64 h-64 object-cover">
+            <h1 class="font-bold text-left">Olutayan Island</h1>
+            <div class="rounded-lg absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
+              <div class="text-white text-center">
+                <button class="text-lg font-semibold">View Details</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex justify-center items-center w-auto h-auto">
+          <div class="relative group w-64 h-64">
+            <img src="/dist/images/Top Attractions/PilarCave.jpg" alt="Sample Image" class="rounded-lg w-64 h-64 object-cover">
+            <h1 class="font-bold text-left">Pilar Cave</h1>
+            <div class="rounded-lg absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
+              <div class="text-white text-center">
+                <button class="text-lg font-semibold">View Details</button>
+              </div>
+            </div>
+          </div>
+        </div>
+                    
+        <div class="flex justify-center items-center w-auto h-auto">
+          <div class="relative group w-64 h-64">
+            <img src="/dist/images/Top Attractions/MoroTower.jpg" alt="Sample Image" class="rounded-lg w-64 h-64 object-cover">
+            <h1 class="font-bold text-left">Moro Tower</h1>
+            <div class="rounded-lg absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
+              <div class="text-white text-center">
+                <button class="text-lg font-semibold">View Details</button>
+              </div>
+            </div>
+          </div>
+        </div>                        
+    </main>
+  </section>
+
+<!-- 1Cuisine -->
+      <main class="container mx-auto my-12 px-6">
+        <section id="Cousine" class="mb-28 p-6 bg-gray-100 rounded-lg scroll-mt-32">
+          <h1 class="text-3xl font-lobster text-center mb-10">"Flavors of Capiz: A Gastronomic Adventure"</h1>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 mb-5">
+            <img class="rounded-lg" src="/dist/images/Cuisine/SeaFoods.jpg" alt="">
+            <div class="p-12">
+              <h1 class="font-bold text-2xl mb-5">1. Seafood Dishes</h1>
+              <p class="mb-3"><strong>Diwal (Angel Wing Clams):</strong> A rare and highly sought-after delicacy, known for its sweet and tender meat.</p>
+              <p class="mb-3"><strong>Talaba (Oysters):</strong> Freshly harvested oysters are often served grilled, steamed, or raw with vinegar and chili. </p>
+              <p class="mb-3"><strong>Kilawin:</strong>  A local version of ceviche, typically made with fresh fish or shellfish marinated in vinegar, lime juice, onions, and chili.</p>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 mb-5">
+            <div class="p-12">
+              <h1 class="font-bold text-2xl mb-5">2. Local Specialties</h1>
+              <p class="mb-3"><strong>Baye-baye:</strong> A sweet treat made from ground rice and coconut, often enjoyed as a snack or dessert.</p>
+              <p class="mb-3"><strong>Puto Cuchinta:</strong>  A traditional rice cake made with brown sugar and lye, topped with grated coconut. </p>
+              <p class="mb-3"><strong>Binakol:</strong> A chicken soup cooked in coconut water with young coconut meat, lemongrass, and other herbs.</p>
+            </div>
+            <img class="rounded-lg" src="/dist/images/Cuisine/LocalSpecialties.jpg" alt="">
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 mb-5">
+            <img class="rounded-lg" src="/dist/images/Cuisine/vigetabledishes.jpg" alt="">
+            <div class="p-12">
+              <h1 class="font-bold text-2xl mb-5">3. Vegetable Dishes</h1>
+              <p class="mb-3"><strong>La Paz Batchoy:</strong> A noodle soup with a flavorful broth made from pork, beef, and chicken, garnished with chicharron, garlic, and scallions.</p>
+              <p class="mb-3"><strong>Laswa:</strong> A simple and healthy vegetable soup with a mix of local greens, squash, okra, and tomatoes. </p>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 mb-5">
+            <div class="p-12">
+              <h1 class="font-bold text-2xl mb-5">4. Snacks and Desserts</h1>
+              <p class="mb-3"><strong>Bibingka:</strong> A type of rice cake traditionally cooked in clay pots lined with banana leaves, often enjoyed during the Christmas season.</p>
+              <p class="mb-3"><strong>Pinasugbo:</strong> Thinly sliced bananas coated with caramelized sugar and sprinkled with sesame seeds. </p>
+            </div>
+            <img class="rounded-lg" src="/dist/images/Cuisine/dishes.jpg" alt="">
+          </div>
+        </section>
+      </main>
+
+<!-- Cuisune End -->
+
+
+<!-- Contact Us -->
+        <main id="ContactUs" class="bg-white rounded-lg p-10 font-roboto mb-12 container mx-auto my-auto px-6 shadow hover:shadow-gray-500 transition duration-500 scroll-mt-28">
+          <section>
+            <div class="grid grid-cols-1 md:grid-cols-2">
+              <div class="flex flex-col justify-center">
+                <h1 class="text-center text-4xl mb-6 font-lobster">Contact Us</h1>
+                <p class="text-center mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, ut suscipit sequi nihil sapiente, cupiditate iste facilis eligendi sed, vel fuga perspiciatis. Aut libero accusamus debitis ipsum dicta, quae velit?</p>
+              </div>
+              <div class="w-auto h-auto flex justify-center">
+                <div class="bg-white shadow-lg rounded-lg p-8 max-w-lg w-full shadow hover:shadow-gray-500 transition duration-500">
+                  <form id="feedback-form" class="space-y-4">
+                      <div>
+                          <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                          <input type="name" id="name" name="name" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500" placeholder="Your Name">
+                      </div>
+                      <div>
+                          <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                          <input type="email" id="email" name="email" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500" placeholder="you@example.com">
+                      </div>
+                      <div>
+                          <label for="message" class="block text-sm font-medium text-gray-700">What can we help you with?</label>
+                          <textarea id="message" name="message" rows="4" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500" placeholder="Your message"></textarea>
+                      </div>
+                      <div>
+                          <button type="submit" class="w-full bg-blue-500 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">Send Message</button>
+                      </div>
+                  </form>
+              </div>
+              </div>
+            </div>
+          </section>
+        </main>
+
+        
+<!-- Contact Us -->
+  <footer class="w-screen border h-auto bg-gray-800 text-white p-5 border">
+    <div class="">
+      <div class="grid grid-cols-2 md:grid-cols-4 mb-5">
+        <h1 class="pl-10 font-lobster text-3xl">CapizXplore</h1>
+        <div class="flex flex-col">
+          <a class="mb-2 font-bold text-2xl hover:text-blue-700 transition" href="#">Resources</a>
+          <a class="mb-2 hover:text-blue-700 transition" href="#">Swiper</a>
+          <a class="mb-2 hover:text-blue-700 transition" href="#">Tailwind CSS</a>
+        </div>
+        <div class="flex flex-col">
+          <a class="mb-2 font-bold text-2xl hover:text-blue-700 transition" href="#">Follow Us</a>
+          <a class="mb-2 hover:text-blue-700 transition" href="#">Facebook</a>
+          <a class="mb-2 hover:text-blue-700 transition" href="#">Instagram</a>
+        </div>
+        <div class="flex flex-col">
+          <a class="mb-2 font-bold text-2xl hover:text-blue-700 transition" href="#">Legal</a>
+          <a class="mb-2 hover:text-blue-700 transition" href="#">Privacy Policy</a>
+          <a class="mb-2 hover:text-blue-700 transition" href="#">Terms & Condition</a>
+        </div>
+      </div>
+      <div class="flex justify-between items-center border-t-2 border-white">
+        <p>© 2024 CapizXplore. All Rights Reserved.</p>
+        <div class="w-64 flex justify-around">
+          <a href="#"><i class='ri-facebook-box-fill ri-2x hover:text-blue-700 transition'></i></a>
+          <a href="#"><i class='ri-instagram-fill ri-2x hover:text-blue-700 transition'></i></a>
+          <a href="#"><i class='ri-twitter-fill ri-2x hover:text-blue-700 transition'></i></a>
+          <a href="#"><i class='ri-contacts-book-2-fill ri-2x hover:text-blue-700 transition'></i></a>
+          <a href="#"><i class='ri-youtube-fill ri-2x hover:text-blue-700 transition'></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>       
+
+
+    <!-- Modals About Capiz -->
+    <div id="modal1" class="z-10 modal fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+        <div class="bg-white rounded-lg shadow-lg max-w-lg w-full p-6">
+          <h2 class="text-2xl font-bold mb-4">More Details</h2>
+          <p>This centuries-old church in Panay Town is famous for its massive church bells, including the "Dakong Lingganay" (Big Bell), which is believed to be the largest in Asia.</p>
+          <button class="close-modal-btn mt-4 bg-red-500 text-white p-1 rounded-lg hover:bg-red-600 transition duration-200">
+            Close
+          </button>
+        </div>
+    </div>
+
+      <div id="modal2" class="z-10 modal fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+        <div class="bg-white rounded-lg shadow-lg max-w-lg w-full p-6">
+          <h2 class="text-2xl font-bold mb-4">More Details</h2>
+          <p>It has since been transformed into a museum hosting artifacts from the indigenous people of Capiz.
+        </p>
+          <button class="close-modal-btn mt-4 bg-red-500 text-white p-1 rounded-lg hover:bg-red-600 transition duration-200">
+            Close
+          </button>
+        </div>
+      </div>
+
+      <div id="modal3" class="z-10 modal fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+        <div class="bg-white rounded-lg shadow-lg max-w-lg w-full p-6">
+          <h2 class="text-2xl font-bold mb-4">More Details</h2>
+          <p>The promenade stretches between San Roque Bridge and Jumbo Bridge (Juliano Alba Bridge). It serves as a public place where visitors can walk along the Panay River. The main attraction at Paseo del Rio is Casa de Mercado, located near the Paseo del Rio welcome sign. Casa de Mercado hosts weekend markets you should check out, which both locals and tourists can frequent on a regular basis.
+        </p>
+          <button class="close-modal-btn mt-4 bg-red-500 text-white p-1 rounded-lg hover:bg-red-600 transition duration-200">
+            Close
+          </button>
+        </div>
+      </div>
+
+      <div id="modal4" class="z-10 modal fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+        <div class="bg-white rounded-lg shadow-lg max-w-lg w-full p-6">
+          <h2 class="text-2xl font-bold mb-4">More Details</h2>
+          <p>Enjoy a leisurely stroll along the park's trails surrounded by lush greenery, visit the butterfly garden, and appreciate the beautiful orchid and bonsai collections. It's a perfect spot for relaxation and rejuvenation.
+        </p>
+          <button class="close-modal-btn mt-4 bg-red-500 text-white p-1 rounded-lg hover:bg-red-600 transition duration-200">
+            Close
+          </button>
+        </div>
+      </div>
+
+      <div id="modal5" class="z-10 modal fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+        <div class="bg-white rounded-lg shadow-lg max-w-lg w-full p-6">
+          <h2 class="text-2xl font-bold mb-4">More Details</h2>
+          <p>These fascinating caves feature stunning rock formations, underground rivers, and awe-inspiring chambers. Marvel at the natural wonders as you navigate through their dark and mysterious passages.
+        </p>
+          <button class="close-modal-btn mt-4 bg-red-500 text-white p-1 rounded-lg hover:bg-red-600 transition duration-200">
+            Close
+          </button>
+        </div>
+      </div>
+
+      <div id="modal6" class="z-10 modal fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+        <div class="bg-white rounded-lg shadow-lg max-w-lg w-full p-6">
+          <h2 class="text-2xl font-bold mb-4">More Details</h2>
+          <p>The towering wall intimidates its onlookers, but it delights the fans of Attack on Titans as it is reminiscent of its three colossal walls (Sina, Rose, Maria).
+        </p>
+          <button class="close-modal-btn mt-4 bg-red-500 text-white p-1 rounded-lg hover:bg-red-600 transition duration-200">
+            Close
+          </button>
+        </div>
+      </div>
+    
+      <!-- About Capiz / Top Attractions Cuisine / Contact Us  -->
+
+     <!-- Modals About Capiz -->
+
+
+    <!-- JS -->
+
+    <script>
+      const menuToggle = document.getElementById('menu-toggle');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      menuToggle.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+      });
+  </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+         document.querySelectorAll('.read-more-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        const modalId = button.getAttribute('data-modal');
+        document.getElementById(modalId).classList.remove('hidden');
+      });
+    });
+
+    document.querySelectorAll('.close-modal-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        button.closest('.modal').classList.add('hidden');
+      });
+    });
+
+    window.addEventListener('click', (event) => {
+      if (event.target.classList.contains('modal')) {
+        event.target.classList.add('hidden');
+      }
+    });
+    </script>
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+          effect: "coverflow",
+          grabCursor: true,
+          centeredSlides: true,
+          loop:true,
+          slidesPerView: "auto",
+          coverflowEffect: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+          },
+          
+          pagination: {
+        el: ".swiper-pagination",
+      },
+
+          autoplay:{
+            delay:3000,
+            disableOnInteraction:false,
+          }
+
+        });
+      </script>
+
+    <script>
+        const nav = document.getElementById('nav');
+        const header = document.querySelector('header');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > header.offsetHeight) {
+                nav.classList.add('fixed', 'top-0', 'left-0', 'w-full');
+            } else {
+                nav.classList.remove('fixed', 'top-0', 'left-0', 'w-full');
+            }
+        });
+    </script>
+    <!-- JS -->
+
+    <script>
+
+      document
+              .getElementById("feedback-form")
+              .addEventListener("submit", async function (event) {
+                event.preventDefault();
+
+                const email = document.getElementById("email").value;
+                const message = document.getElementById("message").value;
+                const name = document.getElementById("name").value;
+
+                try {
+                  const response = await fetch("https://cors-anywhere.herokuapp.com/https://hooks.zapier.com/hooks/catch/21394044/2kq3hi0/",
+                    {
+                      method: "POST",
+                      headers: {
+                        "Access-Control-Allow-Origin": "*",
+                        "Content-Type": "application/json",
+                      },
+                      body: JSON.stringify({ email, message, name }),
+                    }
+                  );
+
+                  if (response.ok) {
+                    alert("Feedback submitted successfully!");
+                    document.getElementById("feedback-form").reset();
+                  } else {
+                    alert("Failed to submit feedback. Please try again.");
+                  }
+                } catch (error) {
+                  alert("An error occurred: " + error.message);
+                }
+              });
+
+    </script>
+  
+</body>
+</html>
